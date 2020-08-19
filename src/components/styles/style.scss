@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 3rem auto 0;
+}
+// styling dot for header and main
+.dot {
+  height: 0.4rem;
+  width: 0.4rem;
+  background-color: red;
+  border-radius: 1rem;
+  display: inline-block;
+  margin: 0.5rem;
+  margin-top: 1rem;
+  @media (min-width: 800px) {
+    margin: 0.8rem;
+  }
+}
+
+.container {
+  padding: 1.2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5rem;
+  @media (min-width: 800px) {
+    flex-direction: row;
+    position: relative;
+    .gallery {
+      width: 30%;
+    }
+    .about {
+      position: absolute;
+      width: 65%;
+      bottom: 3.3rem;
+      right: 0;
+    }
+  }
+  @media (min-width: 1000px) {
+    .about {
+      width: 50%;
+    }
+  }
+
+  .gallery {
+    margin-bottom: 3.5rem;
+    h1 {
+      font-size: 4rem;
+      font-weight: 600;
+      line-height: 4rem;
+      margin-bottom: 3rem;
+    }
+    p {
+      color: grey;
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    button {
+      font-size: 2.3rem;
+      color: red;
+      border: 2px red solid;
+      width: 100%;
+      padding: 1.8rem 0;
+      background: transparent;
+      margin: auto;
+      cursor: pointer;
+      @media (min-width: 800px) {
+        width: 80%;
+      }
+    }
+    @media (min-width: 1100px) {
+      width: 25%;
+    }
+  }
+  .about {
+    p {
+      font-size: 4.7rem;
+      font-weight: lighter;
+    }
+    span {
+      font-size: 4.7rem;
+      color: red;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 800px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 650px) {
+    flex-direction: row;
+    .type {
+      width: 50%;
+    }
+    .finished {
+      width: 50%;
+    }
+  }
+  @media (min-width: 800px) {
+    flex-direction: column;
+    width: 25%;
+    .type {
+      width: 100%;
+    }
+    .finished {
+      width: 100%;
+      display: none;
+    }
+  }
+  select {
+    width: 95%;
+    margin: auto;
+    display: block;
+    height: 5rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    border: 1px grey solid;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+  }
+  .type {
+    margin-top: 3rem;
+    h4 {
+      font-size: 1.5rem;
+      padding-left: 0.5rem;
+    }
+  }
+  .finished {
+    margin-top: 3rem;
+    h4 {
+      font-size: 1.5rem;
+      padding-left: 0.5rem;
+    }
+  }
+  .finishedList {
+    max-height: 5rem;
+    margin-left: 1rem;
+    @media (max-width: 800px) {
+      display: none;
+    }
+    .found {
+      font-size: 2rem;
+      color: grey;
+      padding-top: 2rem;
+    }
+    ul {
+      list-style: none;
+
+      li {
+        cursor: pointer;
+        span {
+          display: inline-block;
+          margin: 0.9rem 0;
+          padding: 0.9rem;
+          font-size: 2rem;
+          background-color: rgb(220, 224, 221);
+        }
+      }
+    }
+  }
+}
+
+.main {
+  padding-top: 4rem;
+  @media (min-width: 800px) {
+    width: 73%;
+  }
+  .image {
+    width: 100%;
+    position: relative;
+    @media (min-width: 800px) {
+      padding-top: 1.6rem;
+    }
+    .backgroundForImg {
+      display: none;
+      position: absolute;
+      width: 17rem;
+      height: 46rem;
+      background-color: rgb(161, 203, 214);
+      bottom: -23rem;
+      right: -7rem;
+      z-index: -1;
+      @media (min-width: 1050px) {
+        display: block;
+      }
+    }
+    .playBtn {
+      width: 9rem;
+      height: 9rem;
+      background-color: red;
+      border-radius: 10rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(200, 0, 34);
+      }
+      .triangle {
+        position: absolute;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-left: 25px solid white;
+        border-bottom: 15px solid transparent;
+        transform: translate(-40%, -50%);
+        top: 50%;
+        left: 50%;
+      }
+    }
+  }
+  .btnGroup {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    .btn {
+      display: inline-block;
+      background-color: red;
+      width: 5rem;
+      height: 5rem;
+      position: relative;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(200, 0, 34);
+      }
+      .arrow {
+        position: absolute;
+        border: solid white;
+        border-width: 0 0.3rem 0.3rem 0;
+        display: inline-block;
+        padding: 0.5rem;
+        left: 40%;
+        top: 37%;
+        transform: translate(50%, 50%);
+      }
+      .left {
+        transform: rotate(135deg);
+      }
+      .right {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .aboutFlat {
+    position: relative;
+    padding-top: 1.5rem;
+    .infoFlex {
+      display: flex;
+      flex-direction: column;
+      .flatName {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    h5 {
+      display: inline;
+      margin: 0.5rem;
+      font-size: 1.5rem;
+    }
+    .address {
+      padding-top: 0.6rem;
+      font-size: 1.5rem;
+      color: grey;
+    }
+    .aboutRenovation {
+      padding-top: 1.7rem;
+      font-size: 1.5rem;
+      color: grey;
+    }
+    .counter {
+      position: absolute;
+      right: 3rem;
+      top: 1.5rem;
+      font-size: 1.8rem;
+      span {
+        &:first-child {
+          color: black;
+        }
+        &:nth-child(2) {
+          color: grey;
+        }
+        font-size: 1.7rem;
+      }
+    }
+    @media (min-width: 800px) {
+      .infoFlex {
+        flex-direction: row;
+      }
+    }
+  }
+  img {
+    width: 100%;
+  }
+}

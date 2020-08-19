@@ -1,0 +1,124 @@
+* { -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; margin: 0; font-size: 10px; font-family: Arial, Helvetica, sans-serif; }
+
+.container { max-width: 1300px; margin: 3rem auto 0; }
+
+.dot { height: 0.4rem; width: 0.4rem; background-color: red; border-radius: 1rem; display: inline-block; margin: 0.5rem; margin-top: 1rem; }
+
+@media (min-width: 800px) { .dot { margin: 0.8rem; } }
+
+.container { padding: 1.2rem; }
+
+.header { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding-left: 0.5rem; }
+
+@media (min-width: 800px) { .header { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; position: relative; }
+  .header .gallery { width: 30%; }
+  .header .about { position: absolute; width: 65%; bottom: 3.3rem; right: 0; } }
+
+@media (min-width: 1000px) { .header .about { width: 50%; } }
+
+.header .gallery { margin-bottom: 3.5rem; }
+
+.header .gallery h1 { font-size: 4rem; font-weight: 600; line-height: 4rem; margin-bottom: 3rem; }
+
+.header .gallery p { color: grey; font-size: 2rem; margin-bottom: 2.5rem; }
+
+.header .gallery button { font-size: 2.3rem; color: red; border: 2px red solid; width: 100%; padding: 1.8rem 0; background: transparent; margin: auto; cursor: pointer; }
+
+@media (min-width: 800px) { .header .gallery button { width: 80%; } }
+
+@media (min-width: 1100px) { .header .gallery { width: 25%; } }
+
+.header .about p { font-size: 4.7rem; font-weight: lighter; }
+
+.header .about span { font-size: 4.7rem; color: red; }
+
+.wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+@media (min-width: 800px) { .wrapper { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; } }
+
+.sidebar { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+@media (min-width: 650px) { .sidebar { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+  .sidebar .type { width: 50%; }
+  .sidebar .finished { width: 50%; } }
+
+@media (min-width: 800px) { .sidebar { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 25%; }
+  .sidebar .type { width: 100%; }
+  .sidebar .finished { width: 100%; display: none; } }
+
+.sidebar select { width: 95%; margin: auto; display: block; height: 5rem; font-size: 2rem; margin-top: 1rem; border: 1px grey solid; border-radius: 0.5rem; padding-left: 1rem; }
+
+.sidebar .type { margin-top: 3rem; }
+
+.sidebar .type h4 { font-size: 1.5rem; padding-left: 0.5rem; }
+
+.sidebar .finished { margin-top: 3rem; }
+
+.sidebar .finished h4 { font-size: 1.5rem; padding-left: 0.5rem; }
+
+.sidebar .finishedList { max-height: 5rem; margin-left: 1rem; }
+
+@media (max-width: 800px) { .sidebar .finishedList { display: none; } }
+
+.sidebar .finishedList .found { font-size: 2rem; color: grey; padding-top: 2rem; }
+
+.sidebar .finishedList ul { list-style: none; }
+
+.sidebar .finishedList ul li { cursor: pointer; }
+
+.sidebar .finishedList ul li span { display: inline-block; margin: 0.9rem 0; padding: 0.9rem; font-size: 2rem; background-color: #dce0dd; }
+
+.main { padding-top: 4rem; }
+
+@media (min-width: 800px) { .main { width: 73%; } }
+
+.main .image { width: 100%; position: relative; }
+
+@media (min-width: 800px) { .main .image { padding-top: 1.6rem; } }
+
+.main .image .backgroundForImg { display: none; position: absolute; width: 17rem; height: 46rem; background-color: #a1cbd6; bottom: -23rem; right: -7rem; z-index: -1; }
+
+@media (min-width: 1050px) { .main .image .backgroundForImg { display: block; } }
+
+.main .image .playBtn { width: 9rem; height: 9rem; background-color: red; border-radius: 10rem; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); cursor: pointer; }
+
+.main .image .playBtn:hover { background-color: #c80022; }
+
+.main .image .playBtn .triangle { position: absolute; display: inline-block; width: 0; height: 0; border-top: 15px solid transparent; border-left: 25px solid white; border-bottom: 15px solid transparent; -webkit-transform: translate(-40%, -50%); transform: translate(-40%, -50%); top: 50%; left: 50%; }
+
+.main .btnGroup { position: absolute; bottom: 0; right: 0; }
+
+.main .btnGroup .btn { display: inline-block; background-color: red; width: 5rem; height: 5rem; position: relative; cursor: pointer; }
+
+.main .btnGroup .btn:hover { background-color: #c80022; }
+
+.main .btnGroup .btn .arrow { position: absolute; border: solid white; border-width: 0 0.3rem 0.3rem 0; display: inline-block; padding: 0.5rem; left: 40%; top: 37%; -webkit-transform: translate(50%, 50%); transform: translate(50%, 50%); }
+
+.main .btnGroup .btn .left { -webkit-transform: rotate(135deg); transform: rotate(135deg); }
+
+.main .btnGroup .btn .right { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+.main .aboutFlat { position: relative; padding-top: 1.5rem; }
+
+.main .aboutFlat .infoFlex { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+.main .aboutFlat .infoFlex .flatName { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+
+.main .aboutFlat h5 { display: inline; margin: 0.5rem; font-size: 1.5rem; }
+
+.main .aboutFlat .address { padding-top: 0.6rem; font-size: 1.5rem; color: grey; }
+
+.main .aboutFlat .aboutRenovation { padding-top: 1.7rem; font-size: 1.5rem; color: grey; }
+
+.main .aboutFlat .counter { position: absolute; right: 3rem; top: 1.5rem; font-size: 1.8rem; }
+
+.main .aboutFlat .counter span { font-size: 1.7rem; }
+
+.main .aboutFlat .counter span:first-child { color: black; }
+
+.main .aboutFlat .counter span:nth-child(2) { color: grey; }
+
+@media (min-width: 800px) { .main .aboutFlat .infoFlex { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; } }
+
+.main img { width: 100%; }
+/*# sourceMappingURL=style.css.map */
